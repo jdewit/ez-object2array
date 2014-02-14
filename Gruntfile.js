@@ -47,12 +47,15 @@ module.exports = function(grunt) {
       }
     },
     karma: {
-      configFile: 'karma.conf.js',
-      singleRun: true
+      unit: {
+        configFile: 'karma.conf.js',
+        singleRun: true
+      }
     },
     uglify: {
       options: {
-        mangle: false,
+        mangle: true,
+        compile: true,
         compress: true
       },
       dist: {
